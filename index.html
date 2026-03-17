@@ -80,6 +80,34 @@
       <p class="text-xs text-gray-500 mt-6 text-center">
         Cocokkan 3 Jackpot untuk hadiah 100K!
       </p>
+
+      <!-- Referral Section -->
+      <div id="referral-section" class="hidden w-full mt-6">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-yellow-700/10 rounded-2xl blur-sm"></div>
+          <div class="relative border border-yellow-500/30 rounded-2xl p-5 bg-gray-900/80 backdrop-blur-sm">
+            <p class="text-center text-gray-400 text-sm mb-1">Mau main lagi?</p>
+            <p class="text-center text-yellow-400 font-semibold text-sm mb-4">Masukkan kode referral kamu</p>
+            <div class="flex gap-2">
+              <input
+                type="text"
+                id="referral-input"
+                placeholder="Contoh: THR-ABCD12"
+                maxlength="12"
+                class="flex-1 bg-gray-800 text-white border border-gray-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all uppercase tracking-widest placeholder:normal-case placeholder:tracking-normal"
+                oninput="this.value = this.value.toUpperCase()"
+              />
+              <button
+                onclick="validateReferral()"
+                class="bg-gradient-to-r from-yellow-500 to-yellow-700 text-white font-bold px-5 py-3 rounded-xl hover:opacity-90 transition-all shadow-[0_0_15px_rgba(234,179,8,0.2)] hover:shadow-[0_0_25px_rgba(234,179,8,0.4)] text-sm"
+              >
+                PAKAI
+              </button>
+            </div>
+            <p id="referral-msg" class="text-xs text-center mt-3 hidden"></p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div

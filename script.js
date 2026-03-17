@@ -1,3 +1,12 @@
+// Kode Referral (5 kode, masing-masing 1x pakai)
+const REFERRAL_CODES = [
+  "THR-ABCD12",
+  "THR-EFGH34",
+  "THR-IJKL56",
+  "THR-MNOP78",
+  "THR-QRST90",
+];
+
 // Konfigurasi Simbol
 const symbols = [
   {
@@ -48,6 +57,50 @@ function kunciTombolSpin() {
   const btnText = document.getElementById("spin-text");
   btn.disabled = true;
   btnText.innerHTML = '<i class="fa-solid fa-lock"></i> KUPON HABIS';
+
+  // Tampilkan section referral
+  document.getElementById("referral-section").classList.remove("hidden");
+}
+
+function validateReferral() {
+  const input = document.getElementById("referral-input");
+  const msg = document.getElementById("referral-msg");
+  const code = input.value.trim().toUpperCase();
+
+  // Ambil daftar kode yang sudah dipakai
+  const usedCodes = JSON.parse(localStorage.getItem("usedCodes") || "[]");
+
+  msg.classList.remove("hidden", "text-red-400", "text-green-400");
+
+  if (!REFERRAL_CODES.includes(code)) {
+    msg.textContent = "❌ Kode referral tidak valid.";
+    msg.classList.add("text-red-400");
+    return;
+  }
+
+  if (usedCodes.includes(code)) {
+    msg.textContent = "❌ Kode ini sudah pernah digunakan.";
+    msg.classList.add("text-red-400");
+    return;
+  }
+
+  // Kode valid & belum dipakai → simpan & reset spin
+  usedCodes.push(code);
+  localStorage.setItem("usedCodes", JSON.stringify(usedCodes));
+  localStorage.removeItem("hasSpun");
+
+  // Reset tombol spin
+  const btn = document.getElementById("spin-btn");
+  const btnText = document.getElementById("spin-text");
+  btn.disabled = false;
+  btnText.innerHTML = "SPIN SEKARANG";
+
+  // Sembunyikan section referral & bersihkan input
+  document.getElementById("referral-section").classList.add("hidden");
+  input.value = "";
+
+  msg.textContent = "";
+  msg.classList.add("hidden");
 }
 
 function getRandomSymbol() {
