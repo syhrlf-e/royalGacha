@@ -1,6 +1,6 @@
 // Kode Referral (5 kode, masing-masing 1x pakai)
 const REFERRAL_CODES = [
-  "THR-ABCD12",
+  "THR-CAIR1X",
   "THR-EFGH34",
   "THR-IJKL56",
   "THR-MNOP78",
