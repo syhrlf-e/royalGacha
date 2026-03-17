@@ -247,7 +247,7 @@ function processClaim() {
   const waNumber = "6285775281805"; // Nomor WhatsApp Anda
   const formattedTotal = currentClaimData.total.toLocaleString("id-ID");
 
-  const waText = `Halo Admin! 🎉\n\nSaya pemenang *Royal Gacha* dan ingin melakukan klaim pencairan hadiah.\n\n*DATA PEMENANG:*\n👤 Nama: ${nama}\n💳 E-Wallet: ${ewallet}\n📱 Nomor: ${nomor}\n\n🏆 *Total Hadiah:* Rp ${formattedTotal}\n🔑 *ID Klaim:* ${currentClaimData.id}\n\nMohon bantuannya untuk diproses ya min, terima kasih!`;
+  const waText = `Halo Admin! 🎉\n\nSaya pemenang *Gacha THR* dan ingin melakukan klaim pencairan hadiah.\n\n*DATA PEMENANG:*\n👤 Nama: ${nama}\n💳 E-Wallet: ${ewallet}\n📱 Nomor: ${nomor}\n\n🏆 *Total Hadiah:* Rp ${formattedTotal}\n🔑 *ID Klaim:* ${currentClaimData.id}\n\nMohon bantuannya untuk diproses ya min, terima kasih!`;
 
   window.open(
     `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`,
