@@ -1,10 +1,11 @@
 // Kode Referral (5 kode, masing-masing 1x pakai)
 const REFERRAL_CODES = [
-  "THR-CAIR1X",
+  //   "THR-CAIR1X",
   "THR-EFGH34",
-  "THR-IJKL56",
-  "THR-MNOP78",
-  "THR-QRST90",
+  "THR-ATMINLOVEYOU26",
+  // "THR-IJKL56",
+  //   "THR-MNOP78",
+  //   "THR-QRST90",
 ];
 
 // Konfigurasi Simbol
