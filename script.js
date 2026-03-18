@@ -3,6 +3,7 @@ const REFERRAL_CODES = [
   //   "THR-CAIR1X",
   "THR-EFGH34",
   "THR-ATMINLOVEYOU26",
+  "THR-MAIN22",
   // "THR-IJKL56",
   //   "THR-MNOP78",
   //   "THR-QRST90",
